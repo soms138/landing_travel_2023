@@ -10,8 +10,8 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <main>
@@ -22,9 +22,9 @@
                 <h1>후쿠오카 유후인</h1>
                 <p>마음의 여유를 느낄 수 있는 힐링스팟, 유후인에서 특별한 경험을 선사합니다</p>
             </div>
-            <!-- 2. youtube!!!!!!!!!!!!!!!!!!! -->
+            <!-- 2. youtube -->
             <div class="ryokan_video">
-                <iframe src="?autoplay=1&muted=1&loop=1&playlist=1"></iframe>
+                <iframe width="717" height="403" src="https://www.youtube.com/embed/cwE6cB89_ns?autoplay=1&mute=1&loop=1&controls=0" title="호시카게 홍보영상 메인모델 신한희군." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
         <!-- 프로모션 -->
@@ -34,16 +34,18 @@
                 <h3>한정 얼리버드 혜택</h3>
                 <div class="promotion_box"><!--promotion img background-->
                     <p>후쿠오카 얼/리/버/드 프로모션</p>
-                    <div class="package">
-                        <h3>후쿠오카 온천여행 패키지</h3>
-                        <div class="period">
-                            <em>여행기간</em>
-                            <span>2023년 9월 23일 ~ 12월 14일</span>
+                    <div class="btm">
+                        <div class="package">
+                            <h3>후쿠오카 온천여행 패키지</h3>
+                            <div class="period">
+                                <em>여행기간</em>
+                                <span>2023년 9월 23일 ~ 12월 14일</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sale">
-                        <span>항공권 최대 60%까지 할인</span>
-                        <span>가족단위로 예약 시 추가 할인</span>
+                        <div class="sale">
+                            <span>항공권 최대 60%까지 할인</span>
+                            <span>가족단위로 예약 시 추가 할인</span>
+                        </div>
                     </div>
                 </div>
                 <a href="#" class="btn">신청하기</a>
@@ -55,7 +57,7 @@
                 <h3>료칸에서만 누릴 수 있는 특별한 경험</h3>
                 <div class="special_wrap">
                     <div class="contents1">
-                        <p><img src="./images/spa_special.jpg" alt=""></p>
+                        <p class="contents_img"><img src="./images/spa_special.jpg" alt=""></p>
                         <div class="desc">
                             <h3>료칸의 온천</h3>
                             <p>천연 미네랄이 풍부한 일본의 자연 온천수를 이용<br>
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                     <div class="contents2">
-                        <p><img src="./images/food_special.jpg" alt=""></p>
+                        <p class="contents_img"><img src="./images/food_special.jpg" alt=""></p>
                         <div class="desc">
                             <h3>가이세키 요리</h3>
                             <p>전통적인 다코(일본 음식) 중 하나로써 식재료의<br>
@@ -73,7 +75,7 @@
                         </div>
                     </div>
                     <div class="contents3">
-                        <p><img src="./images/tea_special.jpg" alt=""></p>
+                        <p class="contents_img"><img src="./images/tea_special.jpg" alt=""></p>
                         <div class="desc">
                             <h3>다도체험</h3>
                             <p>일본식 다다미 방에서 진행되는 다도체험으로,<br>
@@ -84,12 +86,13 @@
                 </div>
             </div>
         </section>
+        <!-- 료칸 객실 타입 -->
         <section class="type_bg">
             <div class="type_wrap">
                 <h3>유후인 료칸 객실 TYPE</h3>
                 <div class="room_type">
                     <div class="a">
-                        <p><img src="./images/room1.jpg" alt=""></p>
+                        <p class="room_img"><img src="./images/room1.jpg" alt=""></p>
                         <div class="type_desc">
                             <div class="type_title">
                                 <em>A</em>
@@ -99,14 +102,14 @@
                             <p>[2인실 이용 시 1인 요금 기준입니다]</p>
                             <div class="price">
                                 <em>38%</em>
-                                <span>350,000원</span>
+                                <del>350,000원</del>
                                 <span>217,000</span>
                                 <span>원</span>
                             </div>
                         </div>
                     </div>
                     <div class="b">
-                        <p><img src="./images/room2.jpg" alt=""></p>
+                        <p class="room_img"><img src="./images/room2.jpg" alt=""></p>
                         <div class="type_desc">
                             <div class="type_title">
                                 <em>B</em>
@@ -116,7 +119,7 @@
                             <p>[2인실 이용 시 1인 요금 기준입니다]</p>
                             <div class="price">
                                 <em>42%</em>
-                                <span>480,000원</span>
+                                <del>480,000원</del>
                                 <span>278,400</span>
                                 <span>원</span>
                             </div>
@@ -125,10 +128,9 @@
                 </div>
                 <form action="#" method="get" class="reservation">
                     <fieldset>
-                        <legend>예약양식</legend>
+                        <legend class="skip">예약양식</legend>
                         <ul>
-                            <li>
-                                <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
+                            <li class="select1">
                                 <img src="./images/Tatami.png" alt="객실선택">
                                 <select name="room_select" id="room_select">
                                     <option value="">객실선택</option>
@@ -136,31 +138,32 @@
                                     <option value="room2">하나비 객실</option>
                                 </select>
                             </li>
-                            <li>
+                            <li class="select2">
                                 <img src="./images/Calendar.png" alt="날짜선택">
                                 <input type="date" name="date_select" id="date_select">
                             </li>
-                            <li>
+                            <li class="select3">
                                 <img src="./images/person.png" alt="인원수">
                                 <span>인원수</span>
-                                <button type="button" value="minus"></button>
-                                <span>0명</span>
-                                <button type="button" value="plus"></button>
+                                <button type="button" value="minus"><img src="./images/minus.png" alt="인원수 감소"></button>
+                                <em>0명</em>
+                                <button type="button" value="plus"><img src="./images/add.png" alt="인원수 추가"></button>
                             </li>
                         </ul>
-                        <button type="submit">예약하기</button>
+                        <button type="submit" class="reservation_btn">예약하기</button>
                     </fieldset>
                 </form>
             </div>
         </section>
+        <!-- 객실 소개 -->
         <section class="room_bg">
             <div class="room">
                 <div class="room_a">
-                    <div class="room_title">
+                    <div class="title">
                         <h3>호타루 객실</h3>
                         <p>[일반 다다미 화실 + 객실 내 노천탕]</p>
                     </div>
-                    <div class="room_img">
+                    <div class="img_wrap">
                         <img src="./images/room1.jpg" alt="다다미 화실">
                         <div class="center">
                             <img src="./images/tea1.jpg" alt="객실 내 다도세트 구비">
@@ -170,11 +173,11 @@
                     </div>
                 </div>
                 <div class="room_b">
-                    <div class="room_title">
+                    <div class="title">
                         <h3>하나비 객실</h3>
                         <p>[일반 다다미 화실 + 객실 내 노천탕 + 정원]</p>
                     </div>
-                    <div class="room_img">
+                    <div class="img_wrap">
                         <img src="./images/room2.jpg" alt="다다미 화실">
                         <div class="center">
                             <img src="./images/tea1.jpg" alt="객실 내 다도세트 구비">
@@ -185,6 +188,7 @@
                 </div>
             </div>
         </section>
+        <!-- 요약 -->
         <section class="summary_bg">
             <div class="summary">
                 <p>후쿠오카 유후인</p>
@@ -193,6 +197,7 @@
             </div>
         </section>
     </main>
+    <!-- footer -->
     <footer>
         <div class="notice">
             <p>꼭 읽어주세요!</p>
