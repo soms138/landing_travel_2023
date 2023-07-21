@@ -6,13 +6,14 @@
     src:url(../fonts/somice.ttf); /* 글꼴경로 지정 */
 }
 @font-face {
+    /* !!!!!!!!!!!!!!!!!!! */
     font-family:'강원교육튼튼_서브타이틀'; /* 글꼴명 지정 */
     src:url(../fonts/power.ttf); /* 글꼴경로 지정 */
 }
 /* reset.css */
 html,body, /*구조태그*/
 h1,h2,h3,h4,h5,h6,p,blockquote,address, /*block*/
-span,strong,em,q,sub,sup,del,s,a,img, /*inline*/
+span,strong,em,q,sub,sup,s,a,img, /*inline*/
 div,header,nav,aside,main,footer,article,figure,figcaption,section, 
 table,thead,tbody,tfoot,tr,th,td,ul,ol,li,dl,dt,dd, /*묶어주는 태그*/
 form,fieldset,legend,input,select,option,button,label,textarea {
