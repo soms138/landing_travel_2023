@@ -6,7 +6,7 @@ main {
 }
 /* 배경 묶음태그 */
 main .promotion_bg,main .special_bg,main .type_bg,main .room_bg,main .summary_bg {}
-main .promotion_bg .promotion,main .special_bg .special,main .type_bg .type_wrap,main .room_bg .room {
+main .promotion_bg .promotion,main .special_bg .special,main .type_bg .type_wrap,main .room_bg .room, footer {
     width: calc(100% - 240px);
     background: #fff;
     margin: 0 auto; /* !!!!!!!!!!!!!!!! */
@@ -99,12 +99,13 @@ main .promotion_bg .promotion .p_title h2 {
     text-align: center;
 }
 main .promotion_bg .promotion .p_title h3 {
-    font-family:'강원교육_서브타이틀';
+    font-family:'티몬_서브타이틀';
     font-size: 3.157rem;
     letter-spacing: -0.02em;
 }
 main .promotion_bg .promotion .promotion_box {
     background: url(../images/promotion.png) no-repeat center;
+    background-size: 100%;
     width: 950px;
     margin: 50px 0;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
@@ -113,6 +114,7 @@ main .promotion_bg .promotion .promotion_box {
 main .promotion_bg .promotion .promotion_box p {
     font-size: 1.777rem;
     color: #fff;
+    font-weight: 900;
     padding: 40px 0;
     text-align: center;
 }
@@ -126,7 +128,7 @@ main .promotion_bg .promotion .promotion_box .btm .package {
     align-items: center;
 }
 main .promotion_bg .promotion .promotion_box .btm .package h3 {
-    font-family:'강원교육튼튼_서브타이틀';
+    font-family:'티몬_서브타이틀';
     font-size: 3.157rem;
 }
 main .promotion_bg .promotion .promotion_box .btm .package .period {
@@ -151,7 +153,7 @@ main .promotion_bg .promotion .promotion_box .btm .package .period span {
     letter-spacing: -0.02em;
 }
 main .promotion_bg .promotion .promotion_box .btm .sale {
-    margin-top: 40px;
+    margin: 50px 0 12px 0;
 }
 main .promotion_bg .promotion .promotion_box .btm .sale span {
     background: #A1C45A;
@@ -180,7 +182,7 @@ main .promotion_bg .promotion .btn {
 main > section > div > h3 {
     background: #EA4C4C;
     padding: 30px;
-    font-family:'강원교육_서브타이틀';
+    font-family:'티몬_서브타이틀';
     font-size: 3.157rem;
     letter-spacing: -0.02em;
     color: #fff;
@@ -219,7 +221,7 @@ main .special_bg .special .special_wrap div .desc {
     align-items: flex-start;
 }
 main .special_bg .special .special_wrap div .desc h3 {
-    font-family:'강원교육_서브타이틀';
+    font-family:'티몬_서브타이틀';
     font-size: 2.369rem;
     letter-spacing: -0.02em;
     margin-bottom: 30px;
@@ -255,48 +257,43 @@ main .special_bg .special .special_wrap .contents3 .contents_img img {}
 main .special_bg .special .special_wrap .contents3 .desc {}
 main .special_bg .special .special_wrap .contents3 .desc h3 {}
 main .special_bg .special .special_wrap .contents3 .desc p {}
-/* 료칸 객실 태그모음 */
+/* 료칸 객실 통합 태그모음 */
 main .type_bg .type_wrap .room_type > div {
     width: 1100px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 100px;
     position: relative;
 }
 main .type_bg .type_wrap .room_type > div .room_img {
-    margin-right: 65px;
+    margin-right: 65px; width: 200px; height: 200px;
 }
 main .type_bg .type_wrap .room_type > div .room_img img {
-    width: 200px; height: 200px;
+    width:100%; height: 100%;
     border-radius: 20px;
 }
 main .type_bg .type_wrap .room_type div .type_desc {}
-main .type_bg .type_wrap .room_type div .type_desc .type_title {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    width: 835px;
-}
+main .type_bg .type_wrap .room_type div .type_desc .type_title {}
 main .type_bg .type_wrap .room_type div .type_desc .type_title em {
-    font-size: 2.350rem;
+    font-family:'티몬_서브타이틀';
+    font-size: 2.1rem; 
 }
 main .type_bg .type_wrap .room_type div .type_desc .type_title span:nth-child(2) {
-    font-size: 2.350rem;
+    font-size: 2.1rem; /* !!!!!!!!!!!!!!!!폰트 사이즈 안맞아서 변경 */
     letter-spacing: -0.02em;
     font-weight: 700;
     margin: 0 10px 0 20px;
 }
 main .type_bg .type_wrap .room_type div .type_desc .type_title span:last-child {
-    font-size: 1.777rem;
+    font-size: 1.5rem;
     letter-spacing: -0.02em;
     font-weight: 700;
 }
 main .type_bg .type_wrap .room_type div .type_desc p {
     font-size: 1.3rem;
     letter-spacing: -0.02em;
-    margin: 20px 0 0 51px;
+    margin: 20px 0 47px 55px;
 }
 main .type_bg .type_wrap .room_type div .type_desc .price {
     position: absolute;
@@ -307,18 +304,22 @@ main .type_bg .type_wrap .room_type div .type_desc .price em {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #EA4C4C;
+    margin-right: 20px;
 }
 main .type_bg .type_wrap .room_type div .type_desc .price del {
     font-size: 1.777rem;
     letter-spacing: -0.02em;
     color: #ccc;
+    margin-right: 20px;
 }
 main .type_bg .type_wrap .room_type div .type_desc .price span:nth-child(3) {
     font-size: 3.157rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
-main .type_bg .type_wrap .room_type div .type_desc .price span:nth-child(4) {}
+main .type_bg .type_wrap .room_type div .type_desc .price span:nth-child(4) {
+    font-size: 1.777rem;
+}
 /* 료칸 선택 버튼 태그 모음 */
 main .type_bg .type_wrap .reservation {
     
@@ -328,32 +329,36 @@ main .type_bg .type_wrap .reservation fieldset ul {
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px 30px;
-    width: 1047px;
+    width: 1100px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 main .type_bg .type_wrap .reservation fieldset ul li {
+    width: 147px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 147px;
 }
-main .type_bg .type_wrap .reservation fieldset ul li:last-child {width: 293px;}
-main .type_bg .type_wrap .reservation fieldset ul li img {}
+main .type_bg .type_wrap .reservation fieldset ul li:first-child {width: 347px;}
+main .type_bg .type_wrap .reservation fieldset ul li:nth-child(2) {width: 347px;}
+main .type_bg .type_wrap .reservation fieldset ul li:last-child {width: 293px; border-right:none; padding-right: 0;}
+main .type_bg .type_wrap .reservation fieldset ul li > img {width: 40px; height: 40px;}
 main .type_bg .type_wrap .reservation fieldset ul li #room_select {}
 main .type_bg .type_wrap .reservation fieldset ul li #room_select option {}
 /* 료칸 객실 기본태그모음 */
 main .type_bg {}
-main .type_bg .type_wrap {}
+main .type_bg .type_wrap {padding-bottom: 100px;}
 main .type_bg .type_wrap h3 {}
 main .type_bg .type_wrap .room_type {}
 main .type_bg .type_wrap .room_type .a {}
 main .type_bg .type_wrap .room_type .a .room_img {}
 main .type_bg .type_wrap .room_type .a .room_img img {}
-main .type_bg .type_wrap .room_type .a .type_desc {margin-bottom: 100px;}
+main .type_bg .type_wrap .room_type .a .type_desc {}
 main .type_bg .type_wrap .room_type .a .type_desc .type_title {}
 main .type_bg .type_wrap .room_type .a .type_desc .type_title em {color: #F1C550;}
 main .type_bg .type_wrap .room_type .a .type_desc .type_title span {}
@@ -375,31 +380,91 @@ main .type_bg .type_wrap .room_type .b .type_desc .price em {}
 main .type_bg .type_wrap .room_type .b .type_desc .price del {}
 main .type_bg .type_wrap .room_type .b .type_desc .price span {}
 main .type_bg .type_wrap .reservation {}
-main .type_bg .type_wrap .reservation fieldset {}
-main .type_bg .type_wrap .reservation fieldset ul {}
+main .type_bg .type_wrap .reservation fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+main .type_bg .type_wrap .reservation fieldset ul {
+    margin-bottom: 50px;
+}
 main .type_bg .type_wrap .reservation fieldset ul .select1 {}
 main .type_bg .type_wrap .reservation fieldset ul .select1 img {}
-main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select {}
+main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select {
+    width: 267px; border-style: none;
+    /* !!!!!!!!!!!!!!!!!!옵션창 높이 */
+}
 main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select option {}
 main .type_bg .type_wrap .reservation fieldset ul .select2 {}
 main .type_bg .type_wrap .reservation fieldset ul .select2 img {}
-main .type_bg .type_wrap .reservation fieldset ul .select2 #date_select {}
+main .type_bg .type_wrap .reservation fieldset ul .select2 #date_select {
+    width: 267px;
+    /* !!!!!!!!!!!!!!!!!!날짜 선택영역 */
+}
 main .type_bg .type_wrap .reservation fieldset ul .select3 {}
 main .type_bg .type_wrap .reservation fieldset ul .select3 img {}
 main .type_bg .type_wrap .reservation fieldset ul .select3 span {}
 main .type_bg .type_wrap .reservation fieldset ul .select3 button {}
-main .type_bg .type_wrap .reservation fieldset ul .select3 button img {}
+main .type_bg .type_wrap .reservation fieldset ul .select3 button img {width: 30px; height: 30px;}
 main .type_bg .type_wrap .reservation fieldset ul .select3 em {}
-main .type_bg .type_wrap .reservation fieldset .reservation_btn {}
+main .type_bg .type_wrap .reservation fieldset .reservation_btn {
+    background: #EA4C4C;
+    border-radius: 50px;
+    padding: 30px 100px;
+    font-size: 1.777rem;
+    font-weight: 700;
+    color: #fff;
+}
+/* 객실 소개 통합 태그모음 */
+main .room_bg .room > div > .title {
+    padding: 100px 0;
+    text-align: center;
+}
+main .room_bg .room > div > .title h3 {
+    width: 626px; height: 173px;
+    display: inline-block;
+}
+main .room_bg .room > div > .title h3 > img {
+    width: 100%;
+}
+/* main .room_bg .room > div > .title h3 {
+    font-family:'소미체_타이틀';
+    font-size: 7.5rem;
+    font-weight: 400;
+    color: linear-gradient(90deg, rgba(241,197,80,1) 0%, rgba(241,138,80,1) 100%);
+    padding-bottom: 20px;
+} */
+main .room_bg .room > div > .title p {
+    color: #FFF;
+    font-size: 1.777rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+main .room_bg .room > div > .img_wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+main .room_bg .room > div > .img_wrap > img {width: 100%; height: 100%;}
+main .room_bg .room > div > .img_wrap .center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: calc(50% - 30px / 2);
+    /* !!!!!!!!!!!!!!!!!!!!! */
+    margin: 30px 0;
+}
 /* 객실 소개 */
 main .room_bg {}
-main .room_bg .room {}
+main .room_bg .room {
+    background: #222;
+}
 main .room_bg .room .room_a {}
 main .room_bg .room .room_a .title {}
 main .room_bg .room .room_a .title h3 {}
 main .room_bg .room .room_a .title p {}
 main .room_bg .room .room_a .img_wrap {}
-main .room_bg .room .room_a .img_wrap img {}
+main .room_bg .room .room_a .img_wrap > img {}
 main .room_bg .room .room_a .img_wrap .center {}
 main .room_bg .room .room_a .img_wrap .center img {}
 main .room_bg .room .room_b {}
@@ -411,12 +476,61 @@ main .room_bg .room .room_b .img_wrap img {}
 main .room_bg .room .room_b .img_wrap .center {}
 main .room_bg .room .room_b .img_wrap .center img {}
 /* 요약 */
-main .summary_bg {}
-main .summary_bg .summary {}
-main .summary_bg .summary p {}
+main .summary_bg {
+    background: url(../images/summary.jpg);
+    background-size: cover;
+    height: 754px;
+    position: relative;
+    padding: 250px 0;
+}
+main .summary_bg::after {
+    content: '';
+    display: block;
+    height: 754px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 50;
+}
+main .summary_bg .summary {
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 100;
+    padding: 50px 0;
+}
+main .summary_bg .summary p {
+    color: #fff;
+    position: relative;
+    z-index: 200;
+    text-align: center;
+}
+main .summary_bg .summary p:first-child {
+    font-family:'소미체_타이틀';
+    font-size: 3.157rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+}
+main .summary_bg .summary p:last-child {
+    letter-spacing: -0.02em;
+    font-size: 1.333rem;
+    line-height: 36px;
+}
+/* footer 통합 태그모음 */
+footer div p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+footer div ul li {
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+footer div ul li:last-child {margin-bottom: 0;}
 /* footer */
-footer {}
-footer .notice {}
+footer {padding: 100px 0;}
+footer .notice {margin-bottom: 50px;}
 footer .notice p {}
 footer .notice ul {}
 footer .notice ul li {}
