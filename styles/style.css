@@ -54,10 +54,12 @@ main .title_bg .title h2,main .title_bg .title h1 {
 main .title_bg .title h2 {
     font-size: 5rem;
     letter-spacing: -0.02em;
+    animation: title 1s linear alternate both;
 }
 main .title_bg .title h1 {
     font-size: 10rem;
     letter-spacing: -0.02em;
+    animation: title 1s 0.8s linear alternate both;
 }
 main .title_bg .title p {
     color: rgba(255, 255, 255, 0.80);
@@ -69,6 +71,11 @@ main .title_bg .title p {
     margin-top: 30px;
     letter-spacing: -0.02em;
     z-index: 200;
+    animation: title 1s 1.6s linear both;
+}
+@keyframes title {
+    0% {transform: translateY(30px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
 }
 /* youtube */
 main .title_bg .ryokan_video {
@@ -108,6 +115,8 @@ main .promotion_bg .promotion .promotion_box {
     background-size: 100%;
     width: 950px;
     margin: 50px 0;
+    padding: 10px 0;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
     /* !!!!!!!!!!!!!!!!!! img drop shadow */
 }
@@ -119,7 +128,7 @@ main .promotion_bg .promotion .promotion_box p {
     text-align: center;
 }
 main .promotion_bg .promotion .promotion_box .btm {
-    padding: 70px 100px;
+    padding: 63px 100px;
 }
 main .promotion_bg .promotion .promotion_box .btm .package {
     display: flex;
@@ -171,13 +180,12 @@ main .promotion_bg .promotion .btn {
     font-size: 1.777rem;
     font-weight: 700;
     color: #fff;
-    /* transition: all 0.3s; */
+    transition: all 0.1s linear;
 }
-/* main .promotion_bg .promotion .btn:hover {
-    width: 350px; 
-    height: 110px;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.5);
-} */
+main .promotion_bg .promotion .btn:hover {
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    transform: scale(1.03);
+}
 /* 중제목 태그모음 */
 main > section > div > h3 {
     background: #EA4C4C;
@@ -348,8 +356,6 @@ main .type_bg .type_wrap .reservation fieldset ul li:first-child {width: 347px;}
 main .type_bg .type_wrap .reservation fieldset ul li:nth-child(2) {width: 347px;}
 main .type_bg .type_wrap .reservation fieldset ul li:last-child {width: 293px; border-right:none; padding-right: 0;}
 main .type_bg .type_wrap .reservation fieldset ul li > img {width: 40px; height: 40px;}
-main .type_bg .type_wrap .reservation fieldset ul li #room_select {}
-main .type_bg .type_wrap .reservation fieldset ul li #room_select option {}
 /* 료칸 객실 기본태그모음 */
 main .type_bg {}
 main .type_bg .type_wrap {padding-bottom: 100px;}
@@ -392,6 +398,7 @@ main .type_bg .type_wrap .reservation fieldset ul .select1 {}
 main .type_bg .type_wrap .reservation fieldset ul .select1 img {}
 main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select {
     width: 267px; border-style: none;
+    cursor: pointer;
     /* !!!!!!!!!!!!!!!!!!옵션창 높이 */
 }
 main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select option {}
@@ -399,13 +406,21 @@ main .type_bg .type_wrap .reservation fieldset ul .select2 {}
 main .type_bg .type_wrap .reservation fieldset ul .select2 img {}
 main .type_bg .type_wrap .reservation fieldset ul .select2 #date_select {
     width: 267px;
+    cursor: pointer;
     /* !!!!!!!!!!!!!!!!!!날짜 선택영역 */
 }
 main .type_bg .type_wrap .reservation fieldset ul .select3 {}
 main .type_bg .type_wrap .reservation fieldset ul .select3 img {}
 main .type_bg .type_wrap .reservation fieldset ul .select3 span {}
-main .type_bg .type_wrap .reservation fieldset ul .select3 button {}
-main .type_bg .type_wrap .reservation fieldset ul .select3 button img {width: 30px; height: 30px;}
+main .type_bg .type_wrap .reservation fieldset ul .select3 button {
+    transition: all 0.1s linear;
+}
+main .type_bg .type_wrap .reservation fieldset ul .select3 button:hover {
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+main .type_bg .type_wrap .reservation fieldset ul .select3 button img {
+    width: 30px; height: 30px;
+}
 main .type_bg .type_wrap .reservation fieldset ul .select3 em {}
 main .type_bg .type_wrap .reservation fieldset .reservation_btn {
     background: #EA4C4C;
@@ -414,6 +429,11 @@ main .type_bg .type_wrap .reservation fieldset .reservation_btn {
     font-size: 1.777rem;
     font-weight: 700;
     color: #fff;
+    transition: all 0.1s linear;
+}
+main .type_bg .type_wrap .reservation fieldset .reservation_btn:hover {
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    transform: scale(1.03);
 }
 /* 객실 소개 통합 태그모음 */
 main .room_bg .room > div > .title {
@@ -424,16 +444,19 @@ main .room_bg .room > div > .title h3 {
     width: 626px; height: 173px;
     display: inline-block;
 }
-main .room_bg .room > div > .title h3 > img {
+/* main .room_bg .room > div > .title h3 > img {
     width: 100%;
-}
-/* main .room_bg .room > div > .title h3 {
+} */
+main .room_bg .room > div > .title h3 {
     font-family:'소미체_타이틀';
     font-size: 7.5rem;
     font-weight: 400;
-    color: linear-gradient(90deg, rgba(241,197,80,1) 0%, rgba(241,138,80,1) 100%);
     padding-bottom: 20px;
-} */
+}
+@keyframes text_bg {
+    0% {background-position: 0 0;}
+    100% {background-position: 400% 0;}
+}
 main .room_bg .room > div > .title p {
     color: #FFF;
     font-size: 1.777rem;
@@ -446,14 +469,8 @@ main .room_bg .room > div > .img_wrap {
     align-items: center;
 }
 main .room_bg .room > div > .img_wrap > img {width: 100%; height: 100%;}
-main .room_bg .room > div > .img_wrap .center {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: calc(50% - 30px / 2);
-    /* !!!!!!!!!!!!!!!!!!!!!  */
-    margin: 30px 0;
-}
+main .room_bg .room > div > .img_wrap .center {margin: 30px 0; width: calc(50% - 30px / 2);}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 객실 소개 */
 main .room_bg {}
 main .room_bg .room {
@@ -461,7 +478,13 @@ main .room_bg .room {
 }
 main .room_bg .room .room_a {}
 main .room_bg .room .room_a .title {}
-main .room_bg .room .room_a .title h3 {}
+main .room_bg .room .room_a .title h3 {
+    background: linear-gradient(90deg, #F1C550, #F18A50, #F1C550);
+    -webkit-background-clip: text; /* 클리핑마스크 같은 기능 */
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 10s linear alternate infinite;
+}
 main .room_bg .room .room_a .title p {}
 main .room_bg .room .room_a .img_wrap {}
 main .room_bg .room .room_a .img_wrap > img {}
@@ -469,7 +492,13 @@ main .room_bg .room .room_a .img_wrap .center {}
 main .room_bg .room .room_a .img_wrap .center img {}
 main .room_bg .room .room_b {}
 main .room_bg .room .room_b .title {}
-main .room_bg .room .room_b .title h3 {}
+main .room_bg .room .room_b .title h3 {
+    background: linear-gradient(90deg, #A1C45A, #5AB7C4, #A1C45A);
+    -webkit-background-clip: text; /* 클리핑마스크 같은 기능 */
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 10s linear alternate infinite;
+}
 main .room_bg .room .room_b .title p {}
 main .room_bg .room .room_b .img_wrap {}
 main .room_bg .room .room_b .img_wrap img {}
