@@ -82,7 +82,7 @@ main .title_bg .ryokan_video {
     text-align: center;
 }
 main .title_bg .ryokan_video iframe {
-    width: 1200px; height: 783px;
+    width: calc(100% - 240px); height: 783px;
     padding: 50px;
     background: #fff;
     position: relative;
@@ -329,9 +329,7 @@ main .type_bg .type_wrap .room_type div .type_desc .price span:nth-child(4) {
     font-size: 1.777rem;
 }
 /* 료칸 선택 버튼 태그 모음 */
-main .type_bg .type_wrap .reservation {
-    
-}
+main .type_bg .type_wrap .reservation {}
 main .type_bg .type_wrap .reservation fieldset {}
 main .type_bg .type_wrap .reservation fieldset ul {
     border: 2px solid #ccc;
@@ -399,6 +397,7 @@ main .type_bg .type_wrap .reservation fieldset ul .select1 img {}
 main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select {
     width: 267px; border-style: none;
     cursor: pointer;
+    height: 40px;
     /* !!!!!!!!!!!!!!!!!!옵션창 높이 */
 }
 main .type_bg .type_wrap .reservation fieldset ul .select1 #room_select option {}
@@ -441,13 +440,6 @@ main .room_bg .room > div > .title {
     text-align: center;
 }
 main .room_bg .room > div > .title h3 {
-    width: 626px; height: 173px;
-    display: inline-block;
-}
-/* main .room_bg .room > div > .title h3 > img {
-    width: 100%;
-} */
-main .room_bg .room > div > .title h3 {
     font-family:'소미체_타이틀';
     font-size: 7.5rem;
     font-weight: 400;
@@ -475,7 +467,6 @@ main .room_bg .room > div > .img_wrap .center img:last-child {margin-right: 0;} 
 main .room_bg .room > div > .img_wrap .center {margin: 30px 0; width: 100%; display:flex; flex-flow: row nowrap; justify-content: space-between;}
 main .room_bg .room > div > .img_wrap .center img {width: 100%;}
 main .room_bg .room > div > .img_wrap .center img:first-child {margin-right: 30px;}
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 객실 소개 */
 main .room_bg {}
 main .room_bg .room {
@@ -484,7 +475,7 @@ main .room_bg .room {
 main .room_bg .room .room_a {}
 main .room_bg .room .room_a .title {}
 main .room_bg .room .room_a .title h3 {
-    background: linear-gradient(90deg, #F1C550, #F18A50, #F1C550);
+    background: linear-gradient(90deg, #F1C550, #F15A50, #F1C550);
     -webkit-background-clip: text; /* 클리핑마스크 같은 기능 */
     -webkit-text-fill-color: transparent;
     background-size: 400%;
@@ -572,10 +563,3 @@ footer .cancel {}
 footer .cancel p {}
 footer .cancel ul {}
 footer .cancel ul li {}
-/* 반응형 웹조건 */
-/* @media(max-width:744px) {
-    main {
-        width: calc(100% - 220px);
-        font-size: 50%;
-    }
-} */
