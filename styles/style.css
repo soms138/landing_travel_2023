@@ -204,11 +204,11 @@ main .special_bg .special {
     padding-bottom: 100px;
 }
 main .special_bg .special > h3 {}
-main .special_bg .special .special_wrap {
-}
+main .special_bg .special .special_wrap {}
 /* special contents 태그모음 */
 main .special_bg .special .special_wrap div {
     width: 1100px;
+    /* width: calc(100% - 100px); */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -274,13 +274,7 @@ main .type_bg .type_wrap .room_type > div {
     margin-bottom: 100px;
     position: relative;
 }
-main .type_bg .type_wrap .room_type > div .room_img {
-    margin-right: 65px; width: 200px; height: 200px;
-}
-main .type_bg .type_wrap .room_type > div .room_img img {
-    width:100%; height: 100%;
-    border-radius: 20px;
-}
+main .type_bg .type_wrap .room_type > div .room_img {margin-right: 65px;}
 main .type_bg .type_wrap .room_type div .type_desc {}
 main .type_bg .type_wrap .room_type div .type_desc .type_title {}
 main .type_bg .type_wrap .room_type div .type_desc .type_title em {
@@ -360,8 +354,9 @@ main .type_bg .type_wrap {padding-bottom: 100px;}
 main .type_bg .type_wrap h3 {}
 main .type_bg .type_wrap .room_type {}
 main .type_bg .type_wrap .room_type .a {}
-main .type_bg .type_wrap .room_type .a .room_img {}
-main .type_bg .type_wrap .room_type .a .room_img img {}
+main .type_bg .type_wrap .room_type .a .room_img {
+    background: url(../images/room1.jpg) no-repeat center; background-size: cover; width: 200px; height: 200px; border-radius: 20px;
+}
 main .type_bg .type_wrap .room_type .a .type_desc {}
 main .type_bg .type_wrap .room_type .a .type_desc .type_title {}
 main .type_bg .type_wrap .room_type .a .type_desc .type_title em {color: #F1C550;}
@@ -372,8 +367,9 @@ main .type_bg .type_wrap .room_type .a .type_desc .price em {}
 main .type_bg .type_wrap .room_type .a .type_desc .price del {}
 main .type_bg .type_wrap .room_type .a .type_desc .price span {}
 main .type_bg .type_wrap .room_type .b {}
-main .type_bg .type_wrap .room_type .b .room_img {}
-main .type_bg .type_wrap .room_type .b .room_img img {}
+main .type_bg .type_wrap .room_type .b .room_img {
+    background: url(../images/room2.jpg) no-repeat center; background-size: cover; width: 200px; height: 200px; border-radius: 20px;
+}
 main .type_bg .type_wrap .room_type .b .type_desc {}
 main .type_bg .type_wrap .room_type .b .type_desc .type_title {}
 main .type_bg .type_wrap .room_type .b .type_desc .type_title em {color: #A1C45A;}
